@@ -1,0 +1,37 @@
+{{#if itemsLeft}}
+    <p id="todo-itemsLeft">
+        {{itemsLeft}} Items left
+    </p>
+{{/if}}
+
+{{#if isClearCompleted}}
+    <ul class="todo-filter">
+        <li class="todo-filter-li">
+            <button type="button"
+                    class="todo-filter-button--all {{#if filterAll}} todo-filter-active{{/if}}"
+                    data-filter-state="all">
+                All
+            </button>
+        </li>
+        <li class="todo-filter-li">
+            <button type="button"
+                    class="todo-filter-button--active {{#if filterActive}} todo-filter-active{{/if}}"
+                    data-filter-state="active">
+                Active
+            </button>
+        </li>
+        <li class="todo-filter-li">
+            <button type="button"
+                    class="todo-filter-button--completed {{#if filterCompleted}} todo-filter-active{{/if}}"
+                    data-filter-state="completed">
+                Completed
+            </button>
+        </li>
+    </ul>
+{{/if}}
+
+{{#if isClearCompleted}}
+    <p>
+        <button type="button" class="todo-clearCompleted-button">Clear completed</button>
+    </p>
+{{/if}}

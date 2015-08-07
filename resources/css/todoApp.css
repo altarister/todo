@@ -1,0 +1,10 @@
+.todoApp-todoList-li__text {
+ }
+
+.todoApp-todoList-li__edit {
+    display:none;
+}
+
+.todo-filter-active {
+    color: red;
+}

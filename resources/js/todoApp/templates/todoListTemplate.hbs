@@ -1,0 +1,27 @@
+{{#each this}}
+    <li class="todoApp-todoList-li">
+        <div class="todoApp-todoList-li__text">
+            <input type="checkbox" class="todoApp-todoList-li__text__checkbox"
+                   data-id="{{id}}"
+                {{#if isCompleted}} checked{{/if}} />
+            {{text}}
+            <button type="button" class="todoApp-todoList-li__text__edit"
+                    data-id="{{id}}">
+                modify
+            </button>
+            <button type="button" class="todoApp-todoList-li__text__delete"
+                    data-id="{{id}}">
+                delete
+            </button>
+        </div>
+
+        <div class="todoApp-todoList-li__edit">
+            <input type="text" class="todoApp-todoList-li__edit__input"
+                   data-id="{{id}}" value="{{text}}"/>
+            <button type="button" class="todoApp-todoList-li__edit__modifyComplete"
+                    data-id="{{id}}">
+                modifications completed
+            </button>
+        </div>
+    </li>
+{{/each}}
